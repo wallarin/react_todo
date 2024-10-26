@@ -1,0 +1,42 @@
+.title-box>h3 {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.title-box:hover>h3 {
+  animation: scrollText 7s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
+.view-box::-webkit-scrollbar, .left-view-box::-webkit-scrollbar {
+    /* 스크롤바 전체 */
+    width: 10px;
+    border-radius: 5px;
+}
+
+.view-box::-webkit-scrollbar-thumb, .left-view-box::-webkit-scrollbar-thumb {
+    /* 현재 위치 스크롤바 */
+    background-color: rgb(154, 255, 53, 0.5);
+    border-radius: 5px;
+
+    /* 막대 padding 설정 */
+    background-clip: padding-box;
+    border: 2.5px solid transparent;
+}
+
+.view-box::-webkit-scrollbar-track, .left-view-box::-webkit-scrollbar-track {
+    /* 외부 스크롤바 */
+    background-color: #dddddd;
+    border-radius: 5px;
+}
